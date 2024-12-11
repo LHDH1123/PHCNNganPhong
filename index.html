@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngân Phong</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/home1.css" />
+    <link rel="stylesheet" href="css/about1.css" />
+    <link rel="stylesheet" href="css/resume1.css" />
+    <link rel="stylesheet" href="css/portfolios1.css" />
+    <link rel="stylesheet" href="css/contact1.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Version bootstrap to have scrollpy -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  </head>
+
+  <body
+    class="d-flex justify-content-end"
+    data-spy="scroll"
+    data-target=".navbar"
+    data-offset="50"
+  >
+    <!-- Header box -->
+    <div
+      id="header-box"
+      class="header-box border-right border-2 border-dark p-0"
+    >
+      <div class="header-image m-0 p-0 relative">
+        <img
+          src="img/avt.jpg"
+          alt=""
+          class="object-cover object-center w-full h-full"
+        />
+      </div>
+
+      <nav class="navbar navbar-dark flex-column justify-content-center">
+        <ul
+          class="nav navbar-nav flex-column justify-content-center text-center text-uppercase"
+        >
+          <li class="nav-item">
+            <a id="home-button" class="nav-link load-menu" href="#about-page"
+              >Trang chủ</a
+            >
+          </li>
+          <li class="nav-item">
+            <a id="about-button" class="nav-link load-menu" href="#service-page"
+              >Dịch vụ</a
+            >
+          </li>
+          <!-- <li class="nav-item">
+          <a id="resume-button" class="nav-link load-menu" href="#resume-page">resume</a>
+        </li> -->
+          <li class="nav-item">
+            <a
+              id="portfolio-button"
+              class="nav-link load-menu func"
+              href="#portfolio-page"
+              >Sản phẩm</a
+            >
+            <!-- Danh mục con -->
+          </li>
+          <ul class="ulproduct">
+            <li>
+              <a
+                id="portfolio-button"
+                class="nav-link1 size16"
+                href="#VTYT"
+                >Vật tư y tế</a
+              >
+            </li>
+            <li>
+              <a id="portfolio-button" class="size16" href="#XSX"
+                >Xưởng sản xuất</a
+              >
+            </li>
+            <li>
+              <a id="portfolio-button" class="size16" href="https://trungtamphuchoichucnangnganphong.kiddihub.com/"
+                >Trung tâm ngân phong</a
+              >
+            </li>
+          </ul>
+          <!-- <li class="nav-item">
+          <a id="blog-button" class="nav-link load-menu" href="#blog-page">blogs</a>
+        </li> -->
+          <li class="nav-item">
+            <a
+              id="contact-button"
+              class="nav-link load-menu"
+              href="#contact-page"
+              >Liên hệ</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div
+        class="footer d-flex justify-content-center align-items-center border-top border-2 border-dark"
+      >
+        @2021 NuclearThemes
+      </div>
+    </div>
+
+    <!-- <div id="header-box" class="header-box border-right border-2 border-dark p-0">
+    <div class="header-image m-0 p-0 relative">
+      <img src="avt.jpg" alt="" class="object-cover object-center w-full h-full" />
+    </div>
+
+    <nav class="navbar navbar-dark flex-column justify-content-center">
+      <ul class="nav navbar-nav flex-column justify-content-center text-center text-uppercase">
+        <li class="nav-item">
+          <a id="home-button" class="nav-link load-menu" href="#home-page">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a id="about-button" class="nav-link load-menu" href="#about-page">Thông tin</a>
+        </li>
+        <li class="nav-item">
+          <a id="portfolio-button" class="nav-link load-menu" href="#portfolio-page">Sản phẩm</a>
+        </li>
+        <li class="nav-item">
+          <a id="contact-button" class="nav-link load-menu" href="#contact-page">Liên hệ</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class=" footer d-flex justify-content-center align-items-center border-top border-2 border-dark">
+      @2021 NuclearThemes
+    </div>
+  </div> -->
+
+    <!-- Hidden bar -->
+    <div id="hidden-bar" class="hidden-bar border border-2 border-dark">
+      <div class="fa fa-bars"></div>
+    </div>
+
+    <!-- Body content hereeeeeeeeeeeeeeeeeeeeeeeeeeeeee !!!  -->
+
+    <div class="big-page">
+      <!-- First page: home -->
+      <!-- <div id="home-page" class="home">
+      <div class="snow">❅</div>
+      <div class="snow">❆</div>
+      <div class="snow">❅</div>
+      <div class="snow">❆</div>
+      <div class="snow">❅</div>
+      <div class="snow">❆</div>
+      <div class="snow">❅</div>
+      <div class="snow">❆</div>
+      <div class="snow">❅</div>
+      <div class="snow">❆</div>
+      <div class="snow">❆</div>
+      <div class="snow">❅</div>
+      <div class="snow">❆</div>
+      <div class="snow">❆</div>
+      <div class="snow">❅</div>
+
+      <div class="container">
+        <div class="content wow bounceInUp"> -->
+
+      <!-- <h1><span class="blue"> NGÂN PHONG</span></h1> -->
+
+      <!-- </div>
+      </div>
+
+    </div> -->
+
+      <!-- Second page: about  -->
+      <div id="about-page" class="about">
+        <!-- About title -->
+        <div class="container title">
+          <h2 class="text-white wow fadeInDown">THÔNG TIN</h2>
+          <span class="wow fadeInDown"
+            >Thông tin
+            <div class="progress">
+              <div class="progress-bar" style="width: 20%"></div>
+            </div>
+          </span>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-lg-6 p-3">
+              <div class="img wow fadeInUp">
+                <img
+                  src="img/about-image.jpg"
+                  class="card-img rounded-0"
+                  alt="About me image"
+                  style="height: 450px"
+                />
+                <div
+                  class="fa fa-search-plus"
+                  data-toggle="modal"
+                  data-target="#photoModal"
+                ></div>
+                <!-- Modal photo -->
+                <div
+                  class="modal fade"
+                  id="photoModal"
+                  tabindex="-1"
+                  role="dialog"
+                  aria-labelledby="exampleModalLongTitle"
+                  aria-hidden="true"
+                >
+                  <div
+                    class="modal-dialog modal-dialog-centered"
+                    role="document"
+                  >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="text-center text-white" style="width: 100%">
+                          THÔNG TIN NGÂN PHONG
+                        </h4>
+                        <button
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <img
+                          class="card-img"
+                          src="img/about-image.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-6 p-3">
+              <div class="content wow slideInRight">
+                <h3>NGÂN PHONG</h3>
+                <p>TRUNG TÂM PHỤC HỒI CHỨC NĂNG</p>
+                <ul>
+                  <li><b>Quốc gia</b><span>: Việt Nam</span></li>
+                  <li>
+                    <b>Địa chỉ</b
+                    ><span>: 52 Lê Lai - Thạch Trang - Hải Châu - Đà Nẵng</span>
+                  </li>
+                  <li><b>SĐT</b><span>: 0917 898 990</span></li>
+                  <li><b>Email</b><span>: truongvandung80@gmail.com</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service -->
+        <div id="service-page" class="container title" style="margin-top: 50px;">
+          <h2 class="text-white wow fadeInDown">DỊCH VỤ</h2>
+          <span class=""
+            >DỊCH VỤ
+            <div class="progress">
+              <div class="progress-bar" style="width: 20%"></div>
+            </div>
+          </span>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-4 p-3">
+              <div class="service-box p-3 wow zoomInUp">
+                <div class="symbol">
+                  <!-- <div class="fa fa-code"></div> -->
+                </div>
+                <h3>
+                  <a
+                    href="https://trungtamphuchoichucnangnganphong.kiddihub.com/"
+                    style="text-decoration: none"
+                    >Trung tâm Ngân Phong</a
+                  >
+                </h3>
+                <div class="space"></div>
+                <br />
+                <img src="img/thanh vien.jpg" alt="" style="width: 294px; height: 246px;"/>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 p-3">
+              <div class="service-box p-3 wow zoomInUp">
+                <i class="fa-solid fa-suitcase-medical"></i>
+                <div class="symbol">
+                  <!-- <div class="fa fa-mobile"></div> -->
+                </div>
+                <h3>
+                  <a
+                    href="http://vattuytenganphong.com"
+                    style="text-decoration: none"
+                    >Sản xuất dụng cụ y tế</a
+                  >
+                </h3>
+                <div class="space"></div>
+                <br />
+                <img src="img/sxyte.jpg" alt="" style="width: 294px; height: 246px;"/>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 p-3">
+              <div class="service-box p-3 wow zoomInUp">
+                <div class="symbol"></div>
+                <h3>
+                  <a href="" style="text-decoration: none"
+                    >Cửa hàng dụng cụ y tế</a
+                  >
+                </h3>
+                <div class="space"></div>
+                <br />
+                <img src="img/cuahang.jpg" alt="" style="width: 294px; height: 246px;"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reviews -->
+          <!-- <div class="container title">
+        <h2 class="text-white wow fadeInDown">REVIEWS</h2>
+        <span class="">REVIEWS
+          <div class="progress">
+            <div class="progress-bar" style="width: 20%"></div>
+          </div>
+        </span>
+      </div> -->
+        </div>
+
+
+        <!-- Portfolios page -->
+
+        <div id="portfolio-page" class="portfolio" style="margin-top: 90px;">
+          <!-- Big title -->
+          <div class="container title">
+            <h2 class="text-white wow fadeInDown">SẢN PHẨM</h2>
+            <span class=""
+              >SẢN PHẨM
+              <div class="progress">
+                <div class="progress-bar" style="width: 60%"></div>
+              </div>
+            </span>
+          </div>
+          <!-- Vật tư y tế -->
+          <div id="VTYT" style="margin-left: 50px; margin-bottom: 30px">
+            <h2 class="text-white wow fadeInDown">Vật tư y tế</h2>
+            <div class="progress_chil">
+              <div class="progress-bar" style="width: 60%"></div>
+            </div>
+          </div>
+
+          <div class="container wow fadeInUp">
+            <div id="portfolioContainer" class="row"></div>
+          </div>
+
+          <div class="container mt-5 mb-5">
+            <div id="portfolio-container"></div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination"></ul>
+            </nav>
+          </div>
+
+          <!-- Xưởng sản xuất -->
+          <div id="XSX" style="margin-left: 50px; margin-bottom: 30px">
+            <h2 class="text-white wow fadeInDown">Xưởng sản xuất</h2>
+            <div class="progress_chil">
+              <div class="progress-bar" style="width: 60%"></div>
+            </div>
+          </div>
+
+          <div class="container wow fadeInUp">
+            <div id="portfolioContainerXSX" class="row"></div>
+          </div>
+
+          <div class="container mt-5 mb-5">
+            <div id="portfolio-containerXSX"></div>
+            <nav aria-label="Page navigation example">
+              <ul class="paginationXSX" style="display: flex;"></ul>
+            </nav>
+          </div>
+        </div>
+
+
+
+        <!-- Blog page -->
+
+        <!-- <div id="blog-page" class="blog">
+      <div class="container title">
+        <h2 class="text-white wow fadeInDown">RECENT BLOGS</h2>
+        <span class="">RECENT BLOGS
+          <div class="progress">
+            <div class="progress-bar" style="width:70%"></div>
+          </div>
+        </span>
+      </div>
+
+      <div class="container wow slideInRight">
+        <div class="row">
+          <div class="col-md-6 p-3">
+            <div class="card p-3 rounded-0">
+              <div class="img"><img src="Blog/blog-image-1.jpg" class="card-img-top rounded-0" alt="..."></div>
+              <h5 class="pt-3">Markdown & Html supported blog.</h5>
+              <div class="container date text-center bg-primary p-3 text-white"><b class="text-white m-0">12</b><br>May
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-3">
+            <div class="card p-3 rounded-0">
+              <div class="img"><img src="Blog/blog-image-2.jpg" class="card-img-top rounded-0" alt="..."></div>
+              <h5 class="pt-3">Installing NodeJS on your device.</h5>
+              <div class="container date text-center bg-primary p-3 text-white"><b class="text-white m-0">12</b><br>May
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-3">
+            <div class="card p-3 rounded-0">
+              <div class="img"><img src="Blog/blog-image-3.jpg" class="card-img-top rounded-0" alt="..."></div>
+              <h5 class="pt-3">UI/UX design starter with Adobe XD.</h5>
+              <div class="container date text-center bg-primary p-3 text-white"><b class="text-white m-0">12</b><br>May
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-3">
+            <div class="card p-3 rounded-0">
+              <div class="img"><img src="Blog/blog-image-4.jpg" class="card-img-top rounded-0" alt="..."></div>
+              <h5 class="pt-3">Boost your post for increasing sales.</h5>
+              <div class="container date text-center bg-primary p-3 text-white"><b class="text-white m-0">12</b><br>May
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-3">
+            <div class="card p-3 rounded-0">
+              <div class="img"><img src="Blog/blog-image-5.jpg" class="card-img-top rounded-0" alt="..."></div>
+              <h5 class="pt-3">Difference between GatsbyJS & NextJS.</h5>
+              <div class="container date text-center bg-primary p-3 text-white"><b class="text-white m-0">12</b><br>May
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-3">
+            <div class="card p-3 rounded-0">
+              <div class="img"><img src="Blog/blog-image-6.jpg" class="card-img-top rounded-0" alt="..."></div>
+              <h5 class="pt-3">How to choose javascript framework for project.</h5>
+              <div class="container date text-center bg-primary p-3 text-white"><b class="text-white m-0">12</b><br>May
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-5 mb-5">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link bg-transparent border border-primary" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link bg-transparent border border-primary" href="#">1</a></li>
+                <li class="page-item"><a class="page-link bg-transparent border border-primary" href="#">2</a></li>
+                <li class="page-item"><a class="page-link bg-transparent border border-primary" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link bg-transparent border border-primary" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+
+        <!-- Contact page -->
+        <div id="contact-page" class="contact-page">
+          <!-- Big title -->
+          <div class="container title">
+            <h2 class="text-white wow fadeInDown">LIÊN HỆ</h2>
+            <span class=""
+              >LIÊN HỆ
+              <div class="progress">
+                <div class="progress-bar" style="width: 90%"></div>
+              </div>
+            </span>
+          </div>
+
+          <!-- Get in touch column -->
+          <div class="container contact">
+            <div class="row">
+              <!-- Cột đầu tiên -->
+              <div class="col-sm-12 col-lg-6 p-3">
+                <div class="info-block wow fadeInUp">
+                  <div class="fa fa-facebook-f"></div>
+                  <div class="infor">
+                    <h6 class="text-white">Facebook</h6>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100064211254012&mibextid=ZbWKwL"
+                      target="_blank"
+                      style="text-decoration: none"
+                    >
+                      facebook.com/trungtamnganphong </a
+                    ><br />
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61559798797641&mibextid=ZbWKwL"
+                      target="_blank"
+                      style="text-decoration: none"
+                    >
+                      facebook.com/vattuytenganphong
+                    </a>
+                  </div>
+                </div>
+                <div class="info-block wow fadeInUp">
+                  <div
+                    class="fa fa-phone"
+                  >
+                </div>
+                <div class="infor">
+                  <h6 class="text-white">Phone</h6>
+                  <a style="color: #5c5ce4">0917 898 990</a><br />
+                  <a style="color: #5c5ce4">0905 118 774</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cột thứ hai -->
+            <div class="col-sm-12 col-lg-6 p-3">
+              <div class="info-block wow fadeInUp">
+                <div class="fa fa-google"></div>
+                <div class="infor">
+                  <h6 class="text-white">Website</h6>
+                  <a
+                    href="http://vattuytenganphong.com"
+                    target="_blank"
+                    style="text-decoration: none"
+                  >
+                    www.vattuytenganphong.com </a
+                  ><br />
+                  <a
+                    href="https://trungtamphuchoichucnangnganphong.kiddihub.com/"
+                    target="_blank"
+                    style="text-decoration: none"
+                  >
+                    trungtamphuchoichucnangnganphong
+                  </a>
+                </div>
+              </div>
+              <div class="info-block wow fadeInUp">
+                <div class="fa">
+                  <svg class="iconcss" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path
+                      d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"
+                    />
+                  </svg>
+                </div>
+                <div class="infor">
+                  <h6 class="text-white">Tiktok</h6>
+                  <a
+                    href="https://www.tiktok.com/@tt.gdb.phcn.ngn.p?_t=8s7ekLLLdjB&_r=1"
+                    target="_blank"
+                    style="text-decoration: none"
+                  >
+                    https://www.tiktok.com/phcn
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container contact" style="display: none">
+          <div class="row">
+            <!-- first column -->
+            <div class="col-md-12 col-lg-6 p-3">
+              <div class="get-in-touch wow fadeInUp">
+                <form id="contact-form">
+                  <h3 class="text-white">Get In Touch</h3>
+                  <div class="input-box">
+                    <label for="">Enter your name*</label>
+                    <input
+                      id="nameInput"
+                      type="text"
+                      oninvalid="invalidInput()"
+                      required
+                    />
+                  </div>
+                  <div class="input-box">
+                    <label for="">Enter your email*</label>
+                    <input
+                      id="emailInput"
+                      type="text"
+                      oninvalid="invalidInput()"
+                      required
+                    />
+                  </div>
+                  <div class="input-box">
+                    <label for="">Enter your subject*</label>
+                    <input
+                      id="subjectInput"
+                      type="text"
+                      oninvalid="invalidInput()"
+                      required
+                    />
+                  </div>
+                  <div class="input-box message">
+                    <label for="">Enter your Message*</label>
+                    <textarea
+                      name=""
+                      id="messageInput"
+                      cols="100%"
+                      rows="100"
+                      oninvalid="invalidInput()"
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit">SEND MAIL</button>
+                </form>
+
+                <div id="invalid-model" class="invalid-model"></div>
+              </div>
+            </div>
+
+            <!-- The second column -->
+            <div class="col-sm-12 col-lg-6 p-3">
+              <div class="info-block wow fadeInUp">
+                <div class="fa fa-facebook-f"></div>
+                <div class="infor">
+                  <h6 class="text-white">Facebook</h6>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100064211254012&mibextid=ZbWKwL"
+                    target="_blank"
+                    style="text-decoration: none"
+                    >facebook.com/trungtamnganphong</a
+                  >
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61559798797641&mibextid=ZbWKwL"
+                    target="_blank"
+                    style="text-decoration: none"
+                    >facebook.com/vattuytenganphong</a
+                  >
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="fa fa-phone"></div>
+                <div class="infor">
+                  <h6 class="text-white" style="text-decoration: none">
+                    Phone
+                  </h6>
+                  <a style="color: #5c5ce4">0917 89 89 90</a><br />
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="fa fa-google"></div>
+                <div class="infor">
+                  <h6 class="text-white">Website</h6>
+                  <a
+                    href="http://vattuytenganphong.com"
+                    target="_blank"
+                    style="text-decoration: none"
+                    >www.vattuytenganphong.com</a
+                  >
+                  <!-- <a href="https://trungtamphuchoichucnangnganphong.kiddihub.com/" target="_blank" style="text-decoration: none; ">trungtamphuchoichucnangnganphong</a> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- <div id="contact-page" class="contact-page">
+              <div class="container contact">
+
+                  <div class="col-sm-12 col-lg-6 p-3">
+                    <div class="info-block wow fadeInUp">
+                      <div class="fa fa-facebook-f"></div>
+                      <div class="infor">
+                        <h6 class="text-white">Facebook</h6>
+                        <a href="https://www.facebook.com/profile.php?id=100064211254012&mibextid=ZbWKwL" target="_blank">facebook.com/trungtamnganphong</a>
+                        <a href="https://www.facebook.com/profile.php?id=61559798797641&mibextid=ZbWKwL" target="_blank">facebook.com/vattuytenganphong</a>
+
+                      </div>
+                    </div>
+                    <div class="info-block">
+                      <div class="fa fa-phone"></div>
+                      <div class="infor">
+                        <h6 class="text-white">Phone</h6>
+                        <a style="color: #5c5ce4;">0917 89 89 90</a><br>
+                        
+                      </div>
+                    </div>
+                    <div class="info-block">
+                      <div class="fa fa-google"></div>
+                      <div class="infor">
+                        <h6 class="text-white">Website</h6>
+                        <a href="http://vattuytenganphong.com" target="_blank">www.vattuytenganphong.com</a>
+                        <a href="https://trungtamphuchoichucnangnganphong.kiddihub.com/" target="_blank">trungtamphuchoichucnangnganphong.kiddihub.com</a>
+                      </div>
+                    </div>
+        
+                  </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="home1.js"></script>
+  </body>
+</html>
